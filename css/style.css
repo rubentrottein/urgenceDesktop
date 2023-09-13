@@ -1,0 +1,9 @@
+*{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+iframe{
+    margin:auto;
+    outline: auto;
+    overflow:hidden;
+    min-height:50vh;
+}
