@@ -7,6 +7,7 @@ const userText= document.querySelector("#preview p");
 const button = document.querySelectorAll("button");
 const textBg = document.querySelector("#preview article");
 const rangeIndicator = document.querySelector(".rangeIndicator");
+const fontRangeIndicator = document.querySelector(".fontRangeIndicator");
 
 let bg = localStorage.getItem("bg");
 let imgBg = localStorage.getItem("imgBg");
@@ -15,6 +16,7 @@ let textBgColor = localStorage.getItem("textBgColor");
 let blurLvl = localStorage.getItem("blurLvl");
 let font = localStorage.getItem("font");
 let text = localStorage.getItem("text");
+let fontSize = localStorage.getItem("fontSize");
 let capslock = false;
 //Report last theme to the inputs
 try{
@@ -27,8 +29,9 @@ try{
     }
     select[1].value = font;
     textarea.value = text;
+    inputs[4].value = fontSize;
 } catch (e) {
-    document.querySelector("#monitor").innerHTML = "Thème non défini";
+    document.querySelector("#monitor").innerHTML = e + " <br>Thème non défini";
 }
 
 //Apply last theme or default
@@ -54,8 +57,9 @@ function start(){
     preview.style.fontFamily=font;
     textBg.style.background = textBgColor + "80";
     textBg.style.opacity = blurLvl;
-    textBg.style.backdropFilter = blur(blurLvl);
+    textBg.style.backdropFilter = blur(blurLvl + "px");
     page.style.fontFamily=font;
+    page.style.fontSize=fontSize;
 
     rangeIndicator.innerHTML = blurLvl;
     userText.innerHTML = text;
@@ -66,21 +70,27 @@ inputs[0].addEventListener("input", ()=>{
     start();
 })
 inputs[1].addEventListener("input", start);
-inputs[2].addEventListener("input", start);
+inputs[2].addEventListener("input", ()=>{
+    imgBg = inputs[2].value;
+    start();
+});
 select[1].addEventListener("input", start);
+inputs[3].addEventListener("input", start);
 select[0].addEventListener("input", ()=>{
     imgBg = select[0].value;
     start();
 });
 textarea.addEventListener("input", start);
+inputs[4].addEventListener("input", start);
 
 function save(){
     localStorage.setItem("bg", bg);
-    localStorage.setItem("color", color); 
-    localStorage.setItem("textBgColor", textBgColor); 
-    localStorage.setItem("blurLvl", blurLvl); 
-    localStorage.setItem("font", font); 
-    localStorage.setItem("text", text); 
+    localStorage.setItem("color", color);
+    localStorage.setItem("textBgColor", textBgColor);
+    localStorage.setItem("blurLvl", blurLvl);
+    localStorage.setItem("font", font);
+    localStorage.setItem("text", text);
+    localStorage.setItem("fontSize", fontSize);
 
     if(capslock){allCaps();}
     if(imgBg){localStorage.setItem("imgBg", imgBg);}
@@ -90,7 +100,7 @@ function save(){
 
 (function populateBgSelector(){
     populate(null);
-    for(let i=0; i<=3;i++){
+    for(let i=0; i<=4;i++){
         populate(i);
     }
     function populate(text){

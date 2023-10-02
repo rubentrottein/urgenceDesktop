@@ -31,6 +31,7 @@
                         <div>
                             <h4>Image</h4>
                             <select name="imgBackground"></select>
+                            <input name="urlImgBackground" col="10" rows="3">
                         </div>
                     </form>
                 </article>
@@ -63,8 +64,16 @@
                             <option value="Arial">Arial</option>
                             <option value="Verdana">Verdana</option>
                             <option value="Trebuchet MS">Trebuchet</option>
+                            <option value="monospace">Monospace</option>
                         </select>
+
                         <button class="caps">MAJUSCULES</button>
+                        
+                        <div>
+                            <h4>Taille de Police</h4>
+                            <input type="range" min="1" max="25" step=".5">
+                            <p class="fontRangeIndicator"></p>
+                        </div>
                     </form>
                 </article>
                 <button>Sauvegarder</button>
