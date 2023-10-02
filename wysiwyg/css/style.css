@@ -1,0 +1,90 @@
+*{
+    margin:0;
+    text-decoration: none;
+}
+main{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+header{
+    background: black;
+    padding: 1em;
+    color: #eeee55;
+}
+nav a{
+    color: #eee;
+    margin-right: 2em;
+}
+main>section{
+    min-width: 20%;
+    margin: 1em 0;
+    background: aliceblue;
+    border-radius: 0 10px 10px 0;
+    outline: 1px solid black;
+    border: 1px solid white;
+    padding: 1em;
+}
+main section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+input, select, textarea{
+    margin: 1em;
+}
+article form{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1em auto;
+}
+button{
+    padding: 1em;
+    background: rebeccapurple;
+    border: 2px white solid;
+    border-radius: 8px;
+    color: white;
+    font-family: monospace;
+}
+.options{
+    display: flex;
+    justify-content: space-around;
+}
+.options div{
+    padding: .5em;
+}
+#preview{
+    min-width: 50%;
+    padding: 1em;
+    border-radius: 8px;
+    border: 1px white solid;
+    outline: 1px black solid;
+    margin: 1em;
+    box-shadow: 0 0 10px #888;
+}
+#preview article{
+    padding: 1em;
+    border-radius: 9px;
+    outline: white 1px solid;
+    margin: auto;
+}
+textarea{
+    display: block;
+    margin: auto;
+}
+footer{
+    position: fixed;
+    min-width: 20em;
+    bottom: 1em;
+    right:-19em;
+    background: rgba(0,0,0,.3);
+    color: black;
+    padding: 1em;
+    border-radius: 10px 0 0 10px;
+    transition: .5s;
+}
+footer:hover{
+    color: white;
+    right:0;
+    background: rgba(0,0,0,1);
+}

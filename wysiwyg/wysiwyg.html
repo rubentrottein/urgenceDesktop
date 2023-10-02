@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Editeur de thème</title>
+        <script src="js/wysiwyg.js" defer></script>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Theme Editor</h1>
+            <nav>
+                <a href="writer.html">Writer</a>
+                <a href="themeEditor.html">Editeur de thème</a>
+                <a href="wysiwyg.html">Wysiwyg</a>
+            </nav>
+            <div id="monitor"></div>
+        </header>
+        <main>            
+            <section>
+                <h2>Editor</h2>
+                <article>
+                    <h3>background:</h3>
+                    <form class="options">
+                        <div>
+                            <h4>Couleur</h4>
+                            <input type="color" name="" id="" value="#333333">
+                        </div>
+                        <div>
+                            <h4>Image</h4>
+                            <select name="imgBackground"></select>
+                        </div>
+                    </form>
+                </article>
+                <article>
+                    <h3>Texte:</h3>
+                    <form class="options">
+                        <div>
+                            <h4>Couleur du texte</h4>
+                            <input type="color" name="" id="" value="">
+                        </div>
+                        <div>
+                            <h4>Couleur du fond</h4>
+                            <input type="color" name="" id="" value="">
+                        </div>
+                        <div>
+                            <h4>Flou du fond</h4>
+                            <input type="range" min="0" max="1" step="0.1">
+                            <p class="rangeIndicator"></p>
+                        </div>
+                    </form>
+                </article>
+                <article>
+                    <h3>Contenu</h3>
+                    <textarea name="" id="" cols="30" rows="10" ></textarea>
+                </article>
+                <article>
+                    <h3>Font</h3>
+                    <form action="#">
+                        <select name="font" id="">
+                            <option value="Arial">Arial</option>
+                            <option value="Verdana">Verdana</option>
+                            <option value="Trebuchet MS">Trebuchet</option>
+                        </select>
+                        <button class="caps">MAJUSCULES</button>
+                    </form>
+                </article>
+                <button>Sauvegarder</button>
+            </section>
+            <section id="preview">
+                <h2>Preview</h2>
+                <article>
+                    <h3>Bonjour</h3>
+                    <p></p>
+                </article>
+            </section>
+        </main>
+        <footer>
+            <section>
+                <h2>Tests</h2>
+                <form method="get" action="#">
+                    
+                    <input type="file" name="" id="">
+                    <input type="submit" value="Envoyer">
+                </form>
+            </section>
+        </footer>
+    </body>
+</html>
