@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.product-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+figure {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin: 1rem;
+    text-align: center;
+    width: 23%;
+}
+figure img{
+    max-width: 90%;
+}
+.cart {
+    margin-top: 2rem;
+    text-align: center;
+}
+button{
+    background: rebeccapurple;
+    padding: 1em;
+    color: white;
+    border-radius: 8px;
+    border: none;
+}
+
+.cart{
+    position: fixed;
+    right:0;
+    top:50%;
+}

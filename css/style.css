@@ -1,9 +1,21 @@
 *{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+<<<<<<< HEAD
 }
 iframe{
     margin:auto;
     outline: auto;
     overflow:hidden;
     min-height:50vh;
+=======
+    margin: 0;
+}
+header{
+    background: rebeccapurple;
+    color: lightblue;
+}
+body{
+    background: black;
+    color: white;
+>>>>>>> db80dd8de238c22b98c201ba9e4ca92d89d3c3e8
 }
