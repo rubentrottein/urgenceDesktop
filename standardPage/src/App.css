@@ -1,0 +1,166 @@
+:root{
+  --bg : url("https://picsum.photos/id/204/3000/2000");
+  --bg1 : url("https://picsum.photos/id/213/1980/1280");
+  --profile : url("https://picsum.photos/500/500");
+  --meufJpg : url("https://randomuser.me/api/?gender=female");
+  --lightGlass: rgba(255,255,255,.6);
+  --darkGlass: rgba(0,0,0,.4);
+}
+*{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+h1, h2{
+  padding: 1em;
+  color: steelblue;
+}
+header{
+  background: linear-gradient(to right, black, transparent);
+  color: #eee;
+  display: flex;
+  justify-content: space-between;
+}
+body{
+  background: var(--bg);
+  background: #222;
+  color: #eee;
+  background-size: cover;
+}
+nav{
+  display: flex;
+  width: 40%;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5em;
+}
+header{
+  position:sticky;
+  top:0;
+  right: 0;
+  z-index: 2;
+}
+a{
+  text-decoration: none;
+  color: royalblue;
+  transition: .5s;
+}
+a:hover{
+  color: lightblue;
+  text-shadow: 0 0 10px black;
+  scale: 1.1;
+}
+span{
+  color: lime;
+  font-family: monospace;
+}
+section{
+  margin: 1em auto;
+  width: 80%;
+}
+article{
+  display: flex;
+}
+
+/********************* Services *****************/
+#services article{
+  display: flex;
+  justify-content: space-around;
+}
+#services li{
+  text-align: center;
+  list-style: none;
+}
+#services img{
+  display: block;
+  margin: auto;
+}
+#services figure:nth-child(0) h2{color: lime;}
+#services figure:nth-child(1) h2{color: lightblue;}
+#services figure:nth-child(2) h2{color: lightcoral;}
+
+/********************* Courses *****************/
+#courses{
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#courses ul{
+  background: var(--lightGlass);
+  color: black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  list-style: none;
+  margin: 1em auto;
+}
+#courses ul, li{
+  border-radius: 1em;
+  padding: 1em;
+}
+#courses li{
+  background: black;
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 24%;
+}
+/************************* Contact ************************/
+
+#contact{
+  margin-top: 10em;
+  padding: 5em 0;
+  background: url("https://picsum.photos/id/7/1280/1200") fixed no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 100%;
+}
+#contact h2{
+  color: cyan;
+  font-size: 2em;
+  text-align: center;
+  text-shadow: 0 0 25px lightblue;
+}
+form{
+  display: flex;
+  width: 70%;
+  min-width: 300px;
+  max-width: 800px;
+  margin: auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 60vh;
+  background: var(--darkGlass);
+  border: 1px solid white;
+  box-shadow: 0 0 15px whitesmoke;
+  border-radius: 10px;
+}
+form label, input, select, textarea{
+  display: block;
+  min-width: 90%;
+  margin: auto;
+  text-align: center;
+}
+form input, select{
+  padding: 0.5em;
+}
+form [type="button"]{
+  background: var(--blueGlass);
+  backdrop-filter: blur(10px);
+  padding: 1em;
+  color: white;
+  border-radius: 8px;
+  border: cyan 2px solid;
+  transition: .5s;
+}
+form [type="button"]:hover{
+  backdrop-filter: blur(20px);
+  color: lightblue;
+  border: lime 3px solid;
+  cursor:pointer;
+}
