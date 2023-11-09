@@ -22,35 +22,41 @@
             <section>
                 <h2>Editor</h2>
                 <article>
-                    <h3>background:</h3>
+                    <h3>Fenetre principale :</h3>
                     <form class="options">
-                        <div>
-                            <h4>Couleur</h4>
+                        <aside>
+                            <h4>Couleur de fond</h4>
                             <input type="color" name="" id="" value="#333333">
-                        </div>
-                        <div>
+                        </aside>
+                        <aside>
                             <h4>Image</h4>
-                            <select name="imgBackground"></select>
-                            <input name="urlImgBackground" col="10" rows="3">
-                        </div>
+                            <div>
+                                <h5>Images prédéfinies</h5>
+                                <select name="imgBackground"></select>
+                            </div>
+                            <div>
+                                <h5>Entrer l'url d'une image en ligne</h5>
+                                <input name="urlImgBackground" col="10" rows="3" value="https://picsum.photos/id/98/1920/1280">
+                            </div>
+                        </aside>
                     </form>
                 </article>
                 <article>
                     <h3>Texte:</h3>
                     <form class="options">
-                        <div>
+                        <aside>
                             <h4>Couleur du texte</h4>
                             <input type="color" name="" id="" value="">
-                        </div>
-                        <div>
+                        </aside>
+                        <aside>
                             <h4>Couleur du fond</h4>
                             <input type="color" name="" id="" value="">
-                        </div>
-                        <div>
+                        </aside>
+                        <aside>
                             <h4>Flou du fond</h4>
                             <input type="range" min="0" max="1" step="0.1">
                             <p class="rangeIndicator"></p>
-                        </div>
+                        </aside>
                     </form>
                 </article>
                 <article>
